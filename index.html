@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jó vagy fejszámolásban?</title>
+</head>
+<body>
+    <div class="flex-container">
+            <h1>Jó vagy fejszámolásban?</h1>
+            <input type="text" id="elso" value="">
+            <p>+</p>
+            <input type="text" id="masodik" value="">
+            <p>=</p>
+            <input type="number" id="megoldas">
+            <input type="button" value="ellenőrzés" onclick="ellenorzes()">
+            <div id="ertekeles">
+
+            </div>
+    </div>
+    <script>
+    
+        
+            let a= Math.floor(Math.random()*101)
+            document.getElementById("elso").value = a
+        
+        
+            let masod= Math.floor(Math.random()*101)
+            document.getElementById('masodik').value=masod
+            
+        
+        function ellenorzes(){
+            let megoldas=document.getElementById(`megoldas`).value
+            console.log(megoldas)
+            console.log(a,masod)
+            if(megoldas==(a+masod)){
+                document.querySelector("#ertekeles").innerHTML = "😀"
+            }
+            else{
+                document.querySelector("#ertekeles").innerHTML = "😥"
+            }            }
+        
+
+    </script>
+</body>
+</html>
